@@ -12,6 +12,21 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
+
+## Benchmark Highlights:
+
+TTM outperforms pre-trained GPT4TS (NeurIPS 23) by …
+
+TTM outperforms pre-trained LLMTime (NeurIPS 23) by ..
+
+TTM outperforms pre-trained Time-LLM (NeurIPS 23) by ..
+
+TTM outperform pre-trained MOIRAI by …
+
+TTM outperforms other popular benchmarks by ….
+
+TTM also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in M4-hourly dataset which pretrained TS models are finding hard to outperform.
+
 ## Model Description
 
 TTM falls under the category of “focused pre-trained models”, wherein each pre-trained TTM is tailored for a particular forecasting 
@@ -34,20 +49,6 @@ only 3-6 hours using 6 A100 GPUs, as opposed to several days or weeks in traditi
   in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, etc) (branch name: 1024-96-v1) 
 
 - Stay tuned for more models !
-
-## Benchmark Highlights:
-
-TTM outperforms pre-trained GPT4TS (NeurIPS 23) by …
-
-TTM outperforms pre-trained LLMTime (NeurIPS 23) by ..
-
-TTM outperforms pre-trained Time-LLM (NeurIPS 23) by ..
-
-TTM outperform pre-trained MOIRAI by …
-
-TTM outperforms other popular benchmarks by ….
-
-TTM also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in M4-hourly dataset which pretrained TS models are finding hard to outperform.
 
 ## Model Details
 
