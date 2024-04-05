@@ -4,9 +4,11 @@ license: cdla-permissive-2.0
 
 # Model Card for TTM
 
-TTM refers to the initial open-source release of Pretrained TinyTimeMixers from IBM Research. With less than 1 Million parameters, TTM 
-introduces the notion of the first-ever “tiny” pre-trained models for Time-Series Forecasting. TTM outperforms several popular benchmarks 
-demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which can 
+TTM, also known as TinyTimeMixer, is a compact pre-trained model for Time-Series Forecasting, open-sourced by IBM Research.
+With less than 1 Million parameters, TTM introduces the notion of the first-ever “tiny” pre-trained models for Time-Series Forecasting. 
+TTM outperforms several popular benchmarks 
+demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which 
+can 
 be easily fine-tuned for your target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details.
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
