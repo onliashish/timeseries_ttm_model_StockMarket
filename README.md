@@ -15,17 +15,18 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 ## Benchmark Highlights:
 
-TTM outperforms pre-trained GPT4TS (NeurIPS 23) by …
-
-TTM outperforms pre-trained LLMTime (NeurIPS 23) by ..
-
-TTM outperforms pre-trained Time-LLM (NeurIPS 23) by ..
-
-TTM outperform pre-trained MOIRAI by …
-
-TTM outperforms other popular benchmarks by ….
-
-TTM also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in M4-hourly dataset which pretrained TS models are finding hard to outperform.
+- TTM outperforms pre-trained GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.
+- TTM outperforms pre-trained LLMTime (NeurIPS 23) by 24% in zero-shot forecasting.
+- TTM outperforms pre-trained SimMTM (NeurIPS 23) by 17% in few-shot forecasting.
+- TTM drastically reduces the compute needs as compared to the LLM-TS pre-training methods, with a 14X cut in
+  learnable parameters, 106X less total parameters, and substantial reductions in fine-tuning (65X),
+  inference time (54X), and memory usage (27X).
+  Zero-shot results of TTM often surpass the few-shot results of many SOTA approaches including
+  PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
+- TTM (1024-96, released in this model card) also outperforms pre-trained MOIRAI on FL = 96 by ...
+- TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
+  M4-hourly dataset which pretrained TS models are finding hard to outperform.
+  
 
 ## Model Description
 
@@ -42,11 +43,11 @@ only 3-6 hours using 6 A100 GPUs, as opposed to several days or weeks in traditi
 
 ## Model Releases (along with the branch name where the models are stored):
 
-- 512-96: Given the last 512 time-points (i.e. context length), this model can forecast the next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, etc)  (branch name: main) 
+- 512-96: Given the last 512 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
+  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc)  (branch name: main) 
 
-- 1024-96: Given the last 1024 time-points (i.e. context length), this model can forecast the next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, etc) (branch name: 1024-96-v1) 
+- 1024-96: Given the last 1024 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
+  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc) (branch name: 1024-96-v1) 
 
 - Stay tuned for more models !
 
