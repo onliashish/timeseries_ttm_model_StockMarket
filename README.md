@@ -12,20 +12,19 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
+TTM Few-shot tuning is 
 
 ## Benchmark Highlights:
 
 - TTM outperforms pre-trained GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.
 - TTM outperforms pre-trained LLMTime (NeurIPS 23) by 24% in zero-shot forecasting.
 - TTM outperforms pre-trained SimMTM (NeurIPS 23) by 17% in few-shot forecasting.
-- TTM drastically reduces the compute needs as compared to the LLM-TS pre-training methods, with a 14X cut in
-  learnable parameters, 106X less total parameters, and substantial reductions in fine-tuning (65X),
-  inference time (54X), and memory usage (27X).
-  Zero-shot results of TTM often surpass the few-shot results of many SOTA approaches including
+- Zero-shot results of TTM often surpass the few-shot results of many SOTA approaches including
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
 - TTM (1024-96, released in this model card) also outperforms pre-trained MOIRAI on FL = 96 by ...
 - TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
   M4-hourly dataset which pretrained TS models are finding hard to outperform.
+- TTM takes only a few seconds for zeroshot/inference and a few minutes for finetuning in 1 GPU machine.
   
 
 ## Model Description
@@ -61,8 +60,8 @@ TTM-1 currently supports 2 modes:
 
  - Finetuned forecasting: Finetune the pre-trained model with your target data to further improve the forecast.
 
-**Since, TTM models are extremely small and fast, it is practically very easy to finetune the model with your available target data to 
-get more accurate forecasts.**
+**Since, TTM models are extremely small and fast, it is practically very easy to finetune the model with your available target data in few minutes 
+to get more accurate forecasts.**
 
 The current release supports multivariate forecasting via both channel independence and channel-mixing approaches. 
 Decoder Channel-Mixing can be enabled during fine-tuning for capturing strong channel-correlation patterns across 
