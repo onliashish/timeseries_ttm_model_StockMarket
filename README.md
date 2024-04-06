@@ -144,9 +144,9 @@ work
 Ekambaram, V., Jati, A., Nguyen, N. H., Dayama, P., Reddy, C., Gifford, W. M., & Kalagnanam, J. (2024). TTMs: Fast Multi-level Tiny Time Mixers for Improved Zero-shot and Few-shot Forecasting of Multivariate Time Series. arXiv preprint arXiv:2401.03955.
 
 
-## Model Card Authors [optional]
+## Model Card Authors
 
-[More Information Needed]
+Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford and Jayant Kalagnanam
 
 ## Model Card Contact
 
