@@ -12,7 +12,6 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
-TTM Few-shot tuning is 
 
 ## Benchmark Highlights:
 
@@ -56,9 +55,9 @@ For more details on TTM architecture and benchmarks, refer to our [paper](https:
 
 TTM-1 currently supports 2 modes:
 
- - Zeroshot forecasting: Directly apply the pre-trained model on your target data to get an initial forecast (with no training).
+ - **Zeroshot forecasting**: Directly apply the pre-trained model on your target data to get an initial forecast (with no training).
 
- - Finetuned forecasting: Finetune the pre-trained model with your target data to further improve the forecast.
+ - **Finetuned forecasting**: Finetune the pre-trained model with a subset of your target data to further improve the forecast.
 
 **Since, TTM models are extremely small and fast, it is practically very easy to finetune the model with your available target data in few minutes 
 to get more accurate forecasts.**
