@@ -26,7 +26,7 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 - TTM (1024-96, released in this model card with 1M parameters) outperforms pre-trained MOIRAI (Small, 14M parameters) by 10%, MOIRAI (Base, 91M parameters) by 4% and
   MOIRAI (Large, 311M parameters) by 3% on zero-shot forecasting (fl = 96). (TODO: add notebook)
 - TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
-  M4-hourly dataset which pretrained TS models are finding hard to outperform. (TODO: add notebook)
+  M4-hourly dataset which existing pretrained TS models are finding hard to outperform. (TODO: add notebook)
 - TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine, as
   opposed to long timing-requirements and heavy computing infra needs of other existing pretrained models.
   
