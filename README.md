@@ -15,15 +15,15 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 ## Benchmark Highlights:
 
-- TTM outperforms pre-trained GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.
-- TTM outperforms pre-trained LLMTime (NeurIPS 23) by 24% in zero-shot forecasting.
-- TTM outperforms pre-trained SimMTM (NeurIPS 23) by 17% in few-shot forecasting.
-- Zero-shot results of TTM often surpass the few-shot results of many SOTA approaches including
+- TTM outperforms pre-trained *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting*.
+- TTM outperforms pre-trained *LLMTime (NeurIPS 23) by 24% in zero-shot forecasting*.
+- TTM outperforms pre-trained *SimMTM (NeurIPS 23) by 17% in few-shot forecasting*.
+- Zero-shot results of TTM often surpass the *few-shot results of many SOTA approaches* including
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
-- TTM (1024-96, released in this model card) also outperforms pre-trained MOIRAI on FL = 96 by ...
+- TTM (1024-96, released in this model card) also outperforms *pre-trained MOIRAI* on FL = 96 by ...
 - TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
   M4-hourly dataset which pretrained TS models are finding hard to outperform.
-- TTM takes only a few seconds for zeroshot/inference and a few minutes for finetuning in 1 GPU machine.
+- TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine.
   
 
 ## Model Description
