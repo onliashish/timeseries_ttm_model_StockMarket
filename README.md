@@ -15,11 +15,11 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
 
 ## Benchmark Highlights:
 
-- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters
-  - *GPT4TS (NeurIPS 23) by 12% in few-shot (5%) forecasting.*
+- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters:
+  - *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.*
   - *LLMTime (NeurIPS 23) by 24% in zero-shot forecasting*.
   - *SimMTM (NeurIPS 23) by 17% in few-shot forecasting*.
-  - *Time-LLM (ICLR 24) by 8% in few-shot (5%) forecasting*
+  - *Time-LLM (ICLR 24) by 8% in few-shot(5%) forecasting*
   - *UniTime (WWW 24) by 27% in zero-shot forecasting.*
 - Zero-shot results of TTM surpass the *few-shot results of many popular SOTA approaches* including
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
