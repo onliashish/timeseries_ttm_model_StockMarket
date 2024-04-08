@@ -57,10 +57,10 @@ getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdem
 ## Model Releases (along with the branch name where the models are stored):
 
 - **512-96:** Given the last 512 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc)  (branch name: main) 
+  in future. Recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc)  (branch name: main) 
 
 - **1024-96:** Given the last 1024 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc) (branch name: 1024-96-v1) 
+  in future. Recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc) (branch name: 1024-96-v1) 
 
 - Stay tuned for more models !
 
