@@ -182,9 +182,6 @@ Ekambaram, V., Jati, A., Nguyen, N. H., Dayama, P., Reddy, C., Gifford, W. M., &
 
 Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford and Jayant Kalagnanam
 
-## Model Card Contact
-
-[More Information Needed]
 
 ## IBM Public Repository Disclosure: 
 
