@@ -69,15 +69,16 @@ to get more accurate forecasts.**
 
 The current release supports multivariate forecasting via both channel independence and channel-mixing approaches. 
 Decoder Channel-Mixing can be enabled during fine-tuning for capturing strong channel-correlation patterns across 
-time-series variates, critical capability lacking in existing counterparts.
+time-series variates, a critical capability lacking in existing counterparts.
 
 In addition, TTM also supports exogenous infusion and categorical data which is not released as part of this version. 
 Stay tuned for these extended features.
 
 ## Recommended Use
-1. Users have to standard scale their data before feeding it to the model (Refer to TSP, our data processing utility for data scaling.)
+1. Users have to externally standard scale their data before feeding it to the model (Refer to TSP, our data processing utility for data scaling.)
 2. Enabling any upsampling or prepending zeros to virtually increase the context length is not recommended and will
    impact the model performance.
+   
  
 ### Model Sources [optional]
 
