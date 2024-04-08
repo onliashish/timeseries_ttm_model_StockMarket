@@ -25,9 +25,9 @@ version supports point forecasting use-cases ranging from minutely to hourly res
 - Zero-shot results of TTM surpass the *few-shot results of many popular SOTA approaches* including
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
 - TTM (1024-96, released in this model card with 1M parameters) outperforms pre-trained MOIRAI-Small (14M parameters) by 10%, MOIRAI-Base (91M parameters) by 2% and
-  MOIRAI-Large (311M parameters) by 3% on zero-shot forecasting (fl = 96). (TODO: add notebook)
+  MOIRAI-Large (311M parameters) by 3% on zero-shot forecasting (fl = 96). [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_1024_96.ipynb)
 - TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
-  M4-hourly dataset which existing pretrained TS models are finding hard to outperform. (TODO: add notebook)
+  M4-hourly dataset which existing pretrained TS models are finding hard to outperform. [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_m4_hourly.ipynb)
 - TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine, as
   opposed to long timing-requirements and heavy computing infra needs of other existing pretrained models.
   
@@ -45,12 +45,15 @@ TTMs that can cater to many common forecasting settings in practice. Additionall
 our pretraining scripts that users can utilize to pretrain models on their own. Pretraining TTMs is very easy and fast, taking 
 only 3-6 hours using 6 A100 GPUs, as opposed to several days or weeks in traditional approaches.
 
+Each pre-trained model will be released in a different branch name in this model card. Kindly access the required model using our 
+getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb) mentioning the branch name.
+
 ## Model Releases (along with the branch name where the models are stored):
 
-- 512-96: Given the last 512 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
+- **512-96:** Given the last 512 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
   in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc)  (branch name: main) 
 
-- 1024-96: Given the last 1024 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
+- **1024-96:** Given the last 1024 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
   in future. Recommended for hourly and minutely forecasts (Ex. resolutions 5 min, 10 min, 15 min, 1 hour, etc) (branch name: 1024-96-v1) 
 
 - Stay tuned for more models !
@@ -76,40 +79,61 @@ In addition, TTM also supports exogenous infusion and categorical data which is 
 Stay tuned for these extended features.
 
 ## Recommended Use
-1. Users have to externally standard scale their data before feeding it to the model (Refer to TSP, our data processing utility for data scaling.)
-2. Enabling any upsampling or prepending zeros to virtually increase the context length is not recommended and will
-   impact the model performance.
+1. Users have to externally standard scale their data indepedently for every channel before feeding it to the model (Refer to [TSP](https://github.com/IBM/tsfm/blob/main/tsfm_public/toolkit/time_series_preprocessor.py), our data processing utility for data scaling.)
+2. Enabling any upsampling or prepending zeros to virtually increase the context length for shorter length datasets is not recommended and will
+   impact the model performance. 
    
  
-### Model Sources [optional]
+### Model Sources
 
-<!-- Provide the basic links for the model. -->
-
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
+- **Repository:** https://github.com/IBM/tsfm/tree/main/tsfm_public/models/tinytimemixer
+- **Paper:** https://arxiv.org/pdf/2401.03955.pdf
 
 
 ## Uses
 
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+```
+# Load Model from HF Model Hub mentioning the branch name in revision field
 
-### Direct Use
+model = TinyTimeMixerForPrediction.from_pretrained(
+                "https://huggingface.co/ibm/TTM", revision="main"
+            ) 
 
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
+# Do zeroshot
+zeroshot_trainer = Trainer(
+        model=model,
+        args=zeroshot_forecast_args,
+        )
+    )
 
-[More Information Needed]
+zeroshot_output = zeroshot_trainer.evaluate(dset_test)
 
-### Downstream Use [optional]
 
-<!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
+# Freeze backbone and enable few-shot or finetuning:
 
-[More Information Needed]
+# freeze backbone
+for param in model.backbone.parameters():
+  param.requires_grad = False
+
+finetune_forecast_trainer = Trainer(
+        model=model,
+        args=finetune_forecast_args,
+        train_dataset=dset_train,
+        eval_dataset=dset_val,
+        callbacks=[early_stopping_callback, tracking_callback],
+        optimizers=(optimizer, scheduler),
+    )
+finetune_forecast_trainer.train()
+fewshot_output = finetune_forecast_trainer.evaluate(dset_test)
+
+```
+
+
 
 ## How to Get Started with the Model
 
-[Point notebooks]
+[Getting Started Notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb)
 
-## Benchmarks
 
 ## Training Data
 
@@ -134,12 +158,14 @@ work
 
 **BibTeX:**
 
+```
 @article{ekambaram2024ttms,
   title={TTMs: Fast Multi-level Tiny Time Mixers for Improved Zero-shot and Few-shot Forecasting of Multivariate Time Series},
   author={Ekambaram, Vijay and Jati, Arindam and Nguyen, Nam H and Dayama, Pankaj and Reddy, Chandra and Gifford, Wesley M and Kalagnanam, Jayant},
   journal={arXiv preprint arXiv:2401.03955},
   year={2024}
 }
+```
 
 **APA:**
 
