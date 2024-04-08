@@ -9,7 +9,7 @@ TTM, also known as TinyTimeMixer, are compact pre-trained models for Time-Series
 
 TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which 
 can be easily fine-tuned for your target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. The current open-source
-version supports forecasting use-cases ranging from minutely to hourly resolutions (Ex. 10 min, 15 min, 1 hour, etc.)
+version supports point forecasting use-cases ranging from minutely to hourly resolutions (Ex. 10 min, 15 min, 1 hour, etc.)
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
