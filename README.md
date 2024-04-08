@@ -8,8 +8,10 @@ TTM, also known as TinyTimeMixer, are compact pre-trained models for Time-Series
 **With less than 1 Million parameters, TTM introduces the notion of the first-ever “tiny” pre-trained models for Time-Series Forecasting.** 
 
 TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which 
-can be easily fine-tuned for your target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. The current open-source
-version supports point forecasting use-cases ranging from minutely to hourly resolutions (Ex. 10 min, 15 min, 1 hour, etc.)
+can be easily fine-tuned for your target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. 
+
+**The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
+(Ex. 10 min, 15 min, 1 hour, etc.)**
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
@@ -26,10 +28,10 @@ version supports point forecasting use-cases ranging from minutely to hourly res
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
 - TTM (1024-96, released in this model card with 1M parameters) outperforms pre-trained MOIRAI-Small (14M parameters) by 10%, MOIRAI-Base (91M parameters) by 2% and
   MOIRAI-Large (311M parameters) by 3% on zero-shot forecasting (fl = 96). [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_1024_96.ipynb)
-- TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
-  M4-hourly dataset which existing pretrained TS models are finding hard to outperform. [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_m4_hourly.ipynb)
+- TTM quick fine-tuning also outperforms the competitive statistical baselines (Statistical ensemble and S-Naive) in
+  M4-hourly dataset which existing pretrained TS models are finding difficult to outperform. [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_m4_hourly.ipynb)
 - TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine, as
-  opposed to long timing-requirements and heavy computing infra needs of other existing pretrained models.
+  opposed to long timing-requirements and heavy computing infra needs of other existing pre-trained models.
   
 
 ## Model Description
