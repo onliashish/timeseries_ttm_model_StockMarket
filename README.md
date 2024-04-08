@@ -23,8 +23,8 @@ can be easily fine-tuned for your target data. Refer to our [paper](https://arxi
   - *UniTime (WWW 24) by 27% in zero-shot forecasting.*
 - Zero-shot results of TTM surpass the *few-shot results of many popular SOTA approaches* including
   PatchTST (ICLR 23), PatchTSMixer (KDD 23), TimesNet (ICLR 23), DLinear (AAAI 23) and FEDFormer (ICML 22).
-- TTM (1024-96, released in this model card with 1M parameters) outperforms pre-trained MOIRAI (Small, 14M parameters) by 10%, MOIRAI (Base, 91M parameters) by 2% and
-  MOIRAI (Large, 311M parameters) by 3% on zero-shot forecasting (fl = 96). (TODO: add notebook)
+- TTM (1024-96, released in this model card with 1M parameters) outperforms pre-trained MOIRAI-Small (14M parameters) by 10%, MOIRAI-Base (91M parameters) by 2% and
+  MOIRAI-Large (311M parameters) by 3% on zero-shot forecasting (fl = 96). (TODO: add notebook)
 - TTM quick fine-tuning also outperforms the hard statistical baselines (Statistical ensemble and S-Naive) in
   M4-hourly dataset which existing pretrained TS models are finding hard to outperform. (TODO: add notebook)
 - TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine, as
