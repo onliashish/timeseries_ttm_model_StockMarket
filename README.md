@@ -22,7 +22,7 @@ can be easily fine-tuned on your multi-variate target data. Refer to our [paper]
 
 ## Benchmark Highlights:
 
-- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters:
+- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters [paper](https://arxiv.org/pdf/2401.03955.pdf):
   - *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.*
   - *LLMTime (NeurIPS 23) by 24% in zero-shot forecasting*.
   - *SimMTM (NeurIPS 23) by 17% in few-shot forecasting*.
