@@ -12,7 +12,7 @@ TTM, also known as TinyTimeMixer, are compact pre-trained models for Multivariat
 **With less than 1 Million parameters, TTM introduces the notion of the first-ever “tiny” pre-trained models for Time-Series Forecasting.** 
 
 TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which 
-can be easily fine-tuned on your multi-variate target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955v4.pdf) for more details. 
+can be easily fine-tuned on your multi-variate target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. 
 
 **The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
 (Ex. 10 min, 15 min, 1 hour, etc.)**
@@ -66,7 +66,7 @@ getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdem
 
 ## Model Details
 
-For more details on TTM architecture and benchmarks, refer to our [paper](https://arxiv.org/pdf/2401.03955v4.pdf).
+For more details on TTM architecture and benchmarks, refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf).
 
 TTM-1 currently supports 2 modes:
 
@@ -93,7 +93,7 @@ Stay tuned for these extended features.
 ### Model Sources
 
 - **Repository:** https://github.com/IBM/tsfm/tree/main/tsfm_public/models/tinytimemixer
-- **Paper:** https://arxiv.org/pdf/2401.03955v4.pdf
+- **Paper:** https://arxiv.org/pdf/2401.03955.pdf
 
 
 ## Uses
