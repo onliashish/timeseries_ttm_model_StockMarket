@@ -11,8 +11,9 @@ license: cdla-permissive-2.0
 TinyTimeMixers (TTMs) are compact pre-trained models for Multivariate Time-Series Forecasting, open-sourced by IBM Research.
 **With less than 1 Million parameters, TTM introduces the notion of the first-ever “tiny” pre-trained models for Time-Series Forecasting.** 
 
-TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTM is pre-trained on diverse public time-series datasets which 
-can be easily fine-tuned on your multi-variate target data. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. 
+TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTMs are lightweight 
+forecasters, pre-trained on publicly available time series data with various augmentations. TTM provides state-of-the-art zero-shot forecasts and can easily be 
+fine-tuned for multi-variate forecasts with just 5% of the training data to be competitive. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. 
 
 **The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
 (Ex. 10 min, 15 min, 1 hour, etc.)**
@@ -23,7 +24,7 @@ can be easily fine-tuned on your multi-variate target data. Refer to our [paper]
 ## Benchmark Highlights:
 
 - TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters [paper](https://arxiv.org/pdf/2401.03955.pdf):
-  - *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting.*
+  - *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting*
   - *LLMTime (NeurIPS 23) by 24% in zero-shot forecasting*.
   - *SimMTM (NeurIPS 23) by 17% in few-shot forecasting*.
   - *Time-LLM (ICLR 24) by 2-8% in few-shot forecasting*
@@ -57,10 +58,12 @@ getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdem
 ## Model Releases (along with the branch name where the models are stored):
 
 - **512-96:** Given the last 512 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc)  (branch name: main) 
+  in future. This model is targeted towards a forecasting setting of context length 512 and forecast length 96 and
+  recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc).   (branch name: main) 
 
 - **1024-96:** Given the last 1024 time-points (i.e. context length), this model can forecast up to next 96 time-points (i.e. forecast length)
-  in future. Recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc) (branch name: 1024-96-v1) 
+  in future. This model is targeted towards a long forecasting setting of context length 1024 and forecast length 96 and
+  recommended for hourly and minutely resolutions (Ex. 10 min, 15 min, 1 hour, etc). (branch name: 1024-96-v1) 
 
 - Stay tuned for more models !
 
