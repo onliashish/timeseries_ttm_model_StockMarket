@@ -21,6 +21,16 @@ fine-tuned for multi-variate forecasts with just 5% of the training data to be c
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
 
+
+## How to Get Started with the Model
+
+- [colab](https://github.com/IBM/tsfm/blob/main/notebooks/tutorial/ttm_tutorial.ipynb)
+- [Getting Started Notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb)
+- [512-96 Benchmarks](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_512_96.ipynb)
+- [1024-96 Benchmarks](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_1024_96.ipynb)
+- Script for Finetuning with cross-channel correlation support - to be added soon
+
+
 ## Benchmark Highlights:
 
 - TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters [paper](https://arxiv.org/pdf/2401.03955.pdf):
@@ -37,7 +47,8 @@ fine-tuned for multi-variate forecasts with just 5% of the training data to be c
   M4-hourly dataset which existing pretrained TS models are finding difficult to outperform. [[notebook]](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_m4_hourly.ipynb)
 - TTM takes only a *few seconds for zeroshot/inference* and a *few minutes for finetuning* in 1 GPU machine, as
   opposed to long timing-requirements and heavy computing infra needs of other existing pre-trained models.
-  
+
+
 
 ## Model Description
 
@@ -137,15 +148,6 @@ fewshot_output = finetune_forecast_trainer.evaluate(dset_test)
 
 ```
 
-
-
-## How to Get Started with the Model
-
-- [colab](https://github.com/IBM/tsfm/blob/main/notebooks/tutorial/ttm_tutorial.ipynb)
-- [Getting Started Notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb)
-- [512-96 Benchmarks](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_512_96.ipynb)
-- [1024-96 Benchmarks](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_1024_96.ipynb)
-- Script for Finetuning with cross-channel correlation support - to be added soon
 
 ## Training Data
 
