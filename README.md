@@ -20,7 +20,7 @@ fine-tuned for multi-variate forecasts with just 5% of the training data to be c
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
-[colab](https://github.com/IBM/tsfm/blob/main/notebooks/tutorial/ttm_tutorial.ipynb)
+[[colab]](https://github.com/IBM/tsfm/blob/main/notebooks/tutorial/ttm_tutorial.ipynb)
 
 ## Benchmark Highlights:
 
