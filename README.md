@@ -1,5 +1,5 @@
 ---
-license: cdla-permissive-2.0
+license: apache-2.0
 ---
 
 # TinyTimeMixer (TTM) Model Card
