@@ -195,7 +195,7 @@ Ekambaram, V., Jati, A., Dayama, P., Mukherjee, S., Nguyen, N. H., Gifford, W. M
 
 ## Model Card Authors
 
-Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford, and Jayant Kalagnanam
+Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford and Jayant Kalagnanam
 
 
 ## IBM Public Repository Disclosure: 
