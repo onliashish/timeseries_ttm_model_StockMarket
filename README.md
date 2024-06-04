@@ -13,7 +13,8 @@ TinyTimeMixers (TTMs) are compact pre-trained models for Multivariate Time-Serie
 
 TTM outperforms several popular benchmarks demanding billions of parameters in zero-shot and few-shot forecasting. TTMs are lightweight 
 forecasters, pre-trained on publicly available time series data with various augmentations. TTM provides state-of-the-art zero-shot forecasts and can easily be 
-fine-tuned for multi-variate forecasts with just 5% of the training data to be competitive. Refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf) for more details. 
+fine-tuned for multi-variate forecasts with just 5% of the training data to be competitive. Refer to our [paper](https://arxiv.org/pdf/2401.03955v5.pdf) for more details.
+
 
 **The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
 (Ex. 10 min, 15 min, 1 hour, etc.)**
@@ -21,6 +22,9 @@ fine-tuned for multi-variate forecasts with just 5% of the training data to be c
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
 
+**Recent updates:** We have developed more sophisticated variants of TTMs (TTM-B, TTM-E and TTM-A), featuring extended benchmarks that compare them with some of the latest models 
+such as TimesFM, Moirai, Chronos, Lag-llama, and Moment. For full details, please refer to the latest version of our [paper](https://arxiv.org/pdf/2401.03955.pdf). 
+Stay tuned for the release of the model weights for these newer variants.
 
 ## How to Get Started with the Model
 
@@ -33,7 +37,7 @@ fine-tuned for multi-variate forecasts with just 5% of the training data to be c
 
 ## Benchmark Highlights:
 
-- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters [paper](https://arxiv.org/pdf/2401.03955.pdf):
+- TTM (with less than 1 Million parameters) outperforms the following popular Pre-trained SOTAs demanding several hundred Million to Billions of parameters [paper](https://arxiv.org/pdf/2401.03955v5.pdf):
   - *GPT4TS (NeurIPS 23) by 7-12% in few-shot forecasting*
   - *LLMTime (NeurIPS 23) by 24% in zero-shot forecasting*.
   - *SimMTM (NeurIPS 23) by 17% in few-shot forecasting*.
@@ -80,7 +84,7 @@ getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdem
 
 ## Model Details
 
-For more details on TTM architecture and benchmarks, refer to our [paper](https://arxiv.org/pdf/2401.03955.pdf).
+For more details on TTM architecture and benchmarks, refer to our [paper](https://arxiv.org/pdf/2401.03955v5.pdf).
 
 TTM-1 currently supports 2 modes:
 
@@ -99,15 +103,16 @@ In addition, TTM also supports exogenous infusion and categorical data which is 
 Stay tuned for these extended features.
 
 ## Recommended Use
-1. Users have to externally standard scale their data indepedently for every channel before feeding it to the model (Refer to [TSP](https://github.com/IBM/tsfm/blob/main/tsfm_public/toolkit/time_series_preprocessor.py), our data processing utility for data scaling.)
-2. Enabling any upsampling or prepending zeros to virtually increase the context length for shorter length datasets is not recommended and will
+1. Users have to externally standard scale their data independently for every channel before feeding it to the model (Refer to [TSP](https://github.com/IBM/tsfm/blob/main/tsfm_public/toolkit/time_series_preprocessor.py), our data processing utility for data scaling.)
+2. Enabling any upsampling or prepending zeros to virtually increase the context length for shorter-length datasets is not recommended and will
    impact the model performance. 
    
  
 ### Model Sources
 
 - **Repository:** https://github.com/IBM/tsfm/tree/main/tsfm_public/models/tinytimemixer
-- **Paper:** https://arxiv.org/pdf/2401.03955.pdf
+- **Paper:** https://arxiv.org/pdf/2401.03955v5.pdf
+- **Paper (Newer variants, extended benchmarks):** https://arxiv.org/pdf/2401.03955.pdf
 
 
 ## Uses
@@ -173,22 +178,24 @@ work
 **BibTeX:**
 
 ```
-@article{ekambaram2024ttms,
-  title={TTMs: Fast Multi-level Tiny Time Mixers for Improved Zero-shot and Few-shot Forecasting of Multivariate Time Series},
-  author={Ekambaram, Vijay and Jati, Arindam and Nguyen, Nam H and Dayama, Pankaj and Reddy, Chandra and Gifford, Wesley M and Kalagnanam, Jayant},
-  journal={arXiv preprint arXiv:2401.03955},
-  year={2024}
+@misc{ekambaram2024tiny,
+      title={Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time Series}, 
+      author={Vijay Ekambaram and Arindam Jati and Pankaj Dayama and Sumanta Mukherjee and Nam H. Nguyen and Wesley M. Gifford and Chandra Reddy and Jayant Kalagnanam},
+      year={2024},
+      eprint={2401.03955},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
 
 **APA:**
 
-Ekambaram, V., Jati, A., Nguyen, N. H., Dayama, P., Reddy, C., Gifford, W. M., & Kalagnanam, J. (2024). TTMs: Fast Multi-level Tiny Time Mixers for Improved Zero-shot and Few-shot Forecasting of Multivariate Time Series. arXiv preprint arXiv:2401.03955.
+Ekambaram, V., Jati, A., Dayama, P., Mukherjee, S., Nguyen, N. H., Gifford, W. M., … Kalagnanam, J. (2024). Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time Series. arXiv [Cs.LG]. Retrieved from http://arxiv.org/abs/2401.03955
 
 
 ## Model Card Authors
 
-Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford and Jayant Kalagnanam
+Vijay Ekambaram, Arindam Jati, Pankaj Dayama, Nam H. Nguyen, Wesley Gifford, and Jayant Kalagnanam
 
 
 ## IBM Public Repository Disclosure: 
