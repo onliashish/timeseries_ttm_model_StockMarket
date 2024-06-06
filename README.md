@@ -16,8 +16,8 @@ forecasters, pre-trained on publicly available time series data with various aug
 fine-tuned for multi-variate forecasts with just 5% of the training data to be competitive. Refer to our [paper](https://arxiv.org/pdf/2401.03955v5.pdf) for more details.
 
 
-**The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
-(Ex. 10 min, 15 min, 1 hour, etc.)**
+**The current open-source version supports point forecasting use-cases specifically ranging from minutely to hourly resolutions 
+(Ex. 10 min, 15 min, 1 hour.).**
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
@@ -34,6 +34,12 @@ Stay tuned for the release of the model weights for these newer variants.
 - [1024-96 Benchmarks](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/tinytimemixer/ttm_benchmarking_1024_96.ipynb)
 - Script for Finetuning with cross-channel correlation support - to be added soon
 
+
+## Recommended Use
+1. Users have to externally standard scale their data independently for every channel before feeding it to the model (Refer to [TSP](https://github.com/IBM/tsfm/blob/main/tsfm_public/toolkit/time_series_preprocessor.py), our data processing utility for data scaling.)
+2. The current open-source version supports only minutely and hourly resolutions(Ex. 10 min, 15 min, 1 hour.). Other lower resolutions (say weekly, or monthly) are currently not supported in this version, as the model needs a minimum context length of 512 or 1024.
+3. Enabling any upsampling or prepending zeros to virtually increase the context length for shorter-length datasets is not recommended and will
+   impact the model performance. 
 
 ## Benchmark Highlights:
 
@@ -102,10 +108,7 @@ time-series variates, a critical capability lacking in existing counterparts.
 In addition, TTM also supports exogenous infusion and categorical data which is not released as part of this version. 
 Stay tuned for these extended features.
 
-## Recommended Use
-1. Users have to externally standard scale their data independently for every channel before feeding it to the model (Refer to [TSP](https://github.com/IBM/tsfm/blob/main/tsfm_public/toolkit/time_series_preprocessor.py), our data processing utility for data scaling.)
-2. Enabling any upsampling or prepending zeros to virtually increase the context length for shorter-length datasets is not recommended and will
-   impact the model performance. 
+
    
  
 ### Model Sources
@@ -114,6 +117,9 @@ Stay tuned for these extended features.
 - **Paper:** https://arxiv.org/pdf/2401.03955v5.pdf
 - **Paper (Newer variants, extended benchmarks):** https://arxiv.org/pdf/2401.03955.pdf
 
+### External Blogs on TTM
+- https://aihorizonforecast.substack.com/p/tiny-time-mixersttms-powerful-zerofew
+- https://medium.com/@david.proietti_17/predicting-venetian-lagoon-tide-levels-with-multivariate-time-series-modeling-8bafdf229588
 
 ## Uses
 
