@@ -16,8 +16,9 @@ forecasters, pre-trained on publicly available time series data with various aug
 fine-tuned for multi-variate forecasts with just 5% of the training data to be competitive. Refer to our [paper](https://arxiv.org/pdf/2401.03955v5.pdf) for more details.
 
 
-**The current open-source version supports point forecasting use-cases ranging from minutely to hourly resolutions 
-(Ex. 10 min, 15 min, 1 hour, etc.)**
+**The current open-source version supports point forecasting use-cases specifically ranging from minutely to hourly resolutions 
+(Ex. 10 min, 15 min, 1 hour.). Other lower resolutions (say weekly, or monthly) are currently not supported in this version, as the model needs a minimum context length of 512 or 1024. Please note that, 
+prepending zeros to virtually increase context length to 512 or 1024 is not allowed. Please contact us for these resolutions.**
 
 **Note that zeroshot, fine-tuning and inference tasks using TTM can easily be executed in 1 GPU machine or in laptops too!!**
 
@@ -114,6 +115,9 @@ Stay tuned for these extended features.
 - **Paper:** https://arxiv.org/pdf/2401.03955v5.pdf
 - **Paper (Newer variants, extended benchmarks):** https://arxiv.org/pdf/2401.03955.pdf
 
+### External Blogs on TTM
+- https://aihorizonforecast.substack.com/p/tiny-time-mixersttms-powerful-zerofew
+- https://medium.com/@david.proietti_17/predicting-venetian-lagoon-tide-levels-with-multivariate-time-series-modeling-8bafdf229588
 
 ## Uses
 
