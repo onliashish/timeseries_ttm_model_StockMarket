@@ -1,5 +1,13 @@
 ---
 license: apache-2.0
+pipeline_tag: time-series-forecasting
+tags:
+- time series
+- forecasting
+- pretrained models
+- foundation models
+- time series foundation models
+- time-series
 ---
 
 # TinyTimeMixer (TTM) Model Card
